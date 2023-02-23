@@ -12,7 +12,7 @@ $xlg-fs: 2rem;
 $lig-blue: #0290ff;
 $drk-blue: #4386bf;
 $black-two: #121212;
-$grey: #888888;
+$grey: #888;
 $lig-pink: #c4c4c4;
 $line-grey: #e8e8e8;
 $white: #fff;
@@ -20,7 +20,7 @@ $white: #fff;
 // Mixins
 @mixin flex_box($padd: 0, $marg: 0, $color: $black-two, $flex-d: column, $justify: center, $align: center, $wdth: 100%) {
   padding: $padd;
-  margin:$marg;
+  margin: $marg;
   width: $wdth;
   display: flex;
   flex-direction: $flex-d;

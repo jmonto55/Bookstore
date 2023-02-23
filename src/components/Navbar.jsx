@@ -3,16 +3,18 @@ import styles from '../sass/Navbar.module.scss';
 
 const Navbar = () => {
   const linkStyles = {
-    color: '#121212',
+    color: 'silver',
     textDecoration: 'none',
-    fontSize: '0.813rem',
+    fontSize: '0.87rem',
     fontFamily: 'Montserrat',
   };
+
   const userStyles = {
     color: '#0290ff',
     fontSize: '2rem',
     margin: 'auto',
   };
+
   return (
     <div className={styles.navbar_wrapper}>
       <nav className={styles.navbar}>
