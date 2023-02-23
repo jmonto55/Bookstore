@@ -3,9 +3,15 @@ import styles from '../sass/Navbar.module.scss';
 
 const Navbar = () => {
   const linkStyles = {
-    color: '#e7e7e7',
+    color: '#121212',
     textDecoration: 'none',
-    fontSize: '1',
+    fontSize: '0.813rem',
+    fontFamily: 'Montserrat',
+  };
+  const userStyles = {
+    color: '#0290ff',
+    fontSize: '2rem',
+    margin: 'auto',
   };
   return (
     <div className={styles.navbar_wrapper}>
@@ -15,14 +21,14 @@ const Navbar = () => {
             <h1 className={styles.navbar_brand}>Bookstore CMS</h1>
           </li>
           <li>
-            <Link style={linkStyles} to="/">Books</Link>
+            <Link style={linkStyles} to="/">BOOKS</Link>
           </li>
           <li>
-            <Link style={linkStyles} to="/categories">Categories</Link>
+            <Link style={linkStyles} to="/categories">CATEGORIES</Link>
           </li>
         </ul>
-        <div className="user_wrapper">
-          <span className="user material-symbols-outlined">person</span>
+        <div className={styles.user_wrapper}>
+          <span style={userStyles} className="material-symbols-outlined">person</span>
         </div>
       </nav>
     </div>

@@ -3,12 +3,31 @@
 .navbar_wrapper {
   border-bottom: solid 1px $line-grey;
   @include flex_box($padd: 10px, $marg: 0, $color: $lig-blue, $flex-d: row, $justify: center, $align: center);
+  
   .navbar {
     @include flex_box($padd: 10px, $marg: 0 10px, $color: $lig-blue, $flex-d: row, $justify: space-between, $align: center);
+    
     .navbar_list {
-      max-width: 400px;
+      max-width: 500px;
       width: 60%;
       @include flex_box($padd: 10px, $marg: 0, $color: $lig-blue, $flex-d: row, $justify: space-between, $align: center);
+      
+      .navbar_brand {
+        font-size: $lg-fs;
+        font-family: $montserrat;
+        font-weight: bold;
+        color: $lig-blue;
+      }
+    }
+
+    .user_wrapper {
+      border: solid 1.5px $line-grey;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      border-radius: 50%;
+      cursor: pointer;
     }
   }
 }
+
