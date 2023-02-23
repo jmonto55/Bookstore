@@ -5,23 +5,25 @@ const Navbar = () => {
   const linkStyles = {
     color: '#e7e7e7',
     textDecoration: 'none',
-    fontSize: '1.2rem',
+    fontSize: '1',
   };
   return (
     <div className={styles.navbar_wrapper}>
       <nav className={styles.navbar}>
-        <i className={styles.wizard_hat} />
         <ul className={styles.navbar_list}>
           <li>
-            <Link style={linkStyles} to="/">Home</Link>
+            <h1 className={styles.navbar_brand}>Bookstore CMS</h1>
           </li>
           <li>
-            <Link style={linkStyles} to="/calculator">Calculator</Link>
+            <Link style={linkStyles} to="/">Books</Link>
           </li>
           <li>
-            <Link style={linkStyles} to="/quote">Quote</Link>
+            <Link style={linkStyles} to="/categories">Categories</Link>
           </li>
         </ul>
+        <div className="user_wrapper">
+          <span className="user material-symbols-outlined">person</span>
+        </div>
       </nav>
     </div>
   );
