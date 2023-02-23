@@ -1,0 +1,19 @@
+.quote_wrapper {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  color: #e7e7e7;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    max-width: 1200px;
+  }
+}

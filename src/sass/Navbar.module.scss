@@ -1,0 +1,33 @@
+.navbar_wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .navbar {
+    max-width: 1500px;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .navbar_list {
+      display: flex;
+      width: 50%;
+      justify-content: space-evenly;
+
+      li {
+        padding: 20px;
+      }
+    }
+
+    .wizard_hat {
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url(../assets/witch-hat.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-left: 2.5%;
+    }
+  }
+}

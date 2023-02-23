@@ -1,0 +1,25 @@
+.home_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+  align-items: center;
+  font-size: 1.3rem;
+  color: #e7e7e7;
+  padding: 3.7%;
+
+  h1 {
+    margin-bottom: 80px;
+    font-size: 4rem;
+    position: relative;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  p {
+    max-width: 1400px;
+    margin: 40px 0;
+  }
+}

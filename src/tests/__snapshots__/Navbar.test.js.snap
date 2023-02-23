@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suite for the Navbar component Should render a snapshot of the Navbar component 1`] = `
+<a
+  href="/"
+  style="color: rgb(231, 231, 231); text-decoration: none; font-size: 1.2rem;"
+>
+  Home
+</a>
+`;

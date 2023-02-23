@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suite for the Footer component Should render a snapshot of the Footer component 1`] = `
+<footer
+  class="footer"
+  data-testid="footer"
+>
+  <p>
+    © 2023 Jose Montoya. All rights reserved.
+  </p>
+  <p>
+    Built with 💙 in Medellin, CO
+  </p>
+</footer>
+`;
