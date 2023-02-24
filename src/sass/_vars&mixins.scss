@@ -15,7 +15,7 @@ $black-two: #121212;
 $grey: #888;
 $lig-pink: #c4c4c4;
 $line-grey: #e8e8e8;
-$white: #fff;
+$white: #fafafa;
 
 // Mixins
 @mixin flex_box($padd: 0, $marg: 0, $color: $black-two, $flex-d: column, $justify: center, $align: center, $wdth: 100%) {
@@ -26,6 +26,13 @@ $white: #fff;
   flex-direction: $flex-d;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin style_text($f-color: $grey, $f-family: $montserrat, $f-weight: bold, $f-size: $sm-fs) {
+  color: $f-color;
+  font-family: $montserrat;
+  font-weight: $f-weight;
+  font-size: $f-size;
 }
 
 // Resets

@@ -1,7 +1,8 @@
 import Book from './Book';
+import styles from '../sass/BookList.module.scss';
 
 const BookList = ({ booksProps }) => (
-  <ul>
+  <ul className={styles.list_cont}>
     {booksProps.map((book) => (
       <Book key={book.id} bookProp={book} />
     ))}
