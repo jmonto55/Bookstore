@@ -1,5 +1,5 @@
 import BookList from './BookList';
-// import FormAddBook from './FormAddBook';
+import FormAddBook from './FormAddBook';
 
 const BookStoreLogic = () => {
   const books = [
@@ -32,7 +32,7 @@ const BookStoreLogic = () => {
   return (
     <div>
       <BookList booksProps={books} />
-      {/* <FormAddBook /> */}
+      <FormAddBook />
     </div>
 
   );

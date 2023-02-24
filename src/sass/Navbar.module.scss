@@ -3,7 +3,7 @@
 .navbar_wrapper {
   border-bottom: solid 1px $line-grey;
 
-  @include flex_box($padd: 10px, $marg: 0, $color: $lig-blue, $flex-d: row, $justify: center, $align: center);
+  @include flex_box($padd: 10px 50px, $marg: 0, $color: $lig-blue, $flex-d: row, $justify: center, $align: center);
 
   .navbar {
     @include flex_box($padd: 10px, $marg: 0 10px, $color: $lig-blue, $flex-d: row, $justify: space-between, $align: center);

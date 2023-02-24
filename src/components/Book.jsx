@@ -26,7 +26,7 @@ const Book = ({ bookProp }) => {
       </div>
       <div className={styles.chapter_cont}>
         <p>CURRENT CHAPTER</p>
-        <p>{bookProp.current}</p>
+        <p style={{ opacity: '1' }}>{bookProp.current}</p>
         <button type="button">UPDATE PROGRESS</button>
       </div>
     </div>
