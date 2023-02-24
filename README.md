@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <h1><b>Math Magicians</b></h1>
+   <h1><b>BookStore</b></h1>
   <!-- <img src="./src/assets/readme_img.png" alt="Awesome Meals image" width="100%" /> -->
 </div>
 
@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 BookStore <a name="about-project"></a>
 
-**Math Magicians** is a web application inspired by Math, it has three routes: home, a calculate route containing a fully functional calculator, and a final route with a cool math quote.
+**BookStore** is a web application inspired by books, it has two routes: home, and a categories route containing a full list of books which you can review, comment or remove.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,8 +70,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Users can make any math operation using the calculator section**
-- **User can access a cool Math quote**
+- **Users can see ahrd coded books for now**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,14 +102,14 @@ To get a local copy up and running follow these simple example steps.
 Clone this repository in the desired folder:
 ```
 cd my-folder
-git clone https://github.com/jmonto55/Math-magicians.git
+git clone https://github.com/jmonto55/Bookstore.git
 ```
 
 ### Install
 
 To install this project:
 ```
-cd Math-magicians
+cd Bookstore
 code .
 npm install
 ```
@@ -148,9 +147,9 @@ npm test
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Cool React components will be added in the future**
-- [ ] **Events and hooks will be used**
-- [ ] **The webapp will be unit tested**
+- [ ] **Add book functionality will be added in the future**
+- [ ] **Remove book functionality will be added in the future**
+- [ ] **Comment on book functionality will be added in the future**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
