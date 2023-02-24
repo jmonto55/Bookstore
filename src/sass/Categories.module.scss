@@ -1,0 +1,19 @@
+@use 'vars&mixins' as *;
+
+.btn_wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  .check_btn {
+    margin: auto;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    color: $white;
+    background-color: $lig-blue;
+    font-family: $roboto;
+    font-size: $sm-fs;
+  }
+}
