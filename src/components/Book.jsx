@@ -3,7 +3,7 @@ import styles from '../sass/Book.module.scss';
 const Book = ({ bookProp }) => {
   const userStyles = {
     padding: '4px 15px',
-    borderRight: 'solid 2px #e8e8e8',
+    borderRight: 'solid 2px #e8e8e',
   };
   return (
     <div className={styles.book_main_cont}>

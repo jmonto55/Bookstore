@@ -1,7 +1,7 @@
 import BookList from './BookList';
 import FormAddBook from './FormAddBook';
 
-const BookStoreLogic = () => {
+const BookStore = () => {
   const books = [
     {
       id: 1,
@@ -38,4 +38,4 @@ const BookStoreLogic = () => {
   );
 };
 
-export default BookStoreLogic;
+export default BookStore;
