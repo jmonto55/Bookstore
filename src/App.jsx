@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import BookStoreLogic from './components/BookStoreLogic.jsx';
+import BookStoreLogic from './components/BookStoreLogic';
 import Categories from './components/Categories';
 import Navbar from './components/Navbar';
 
