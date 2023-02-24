@@ -78,7 +78,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://math-magicians-8cps.onrender.com/)
+- [Live Demo](https://book-store-s3pp.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
