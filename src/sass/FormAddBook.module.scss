@@ -2,6 +2,7 @@
 
 .form_container {
   @include flex_box($padd: 0 70px 100px 70px, $marg: 0, $color: $black-two, $flex-d: column, $justify: center, $align: flex-start, $wdth: 100%);
+
   background-color: $white;
 
   .line {
@@ -10,7 +11,7 @@
     background-color: $line-grey;
     margin-bottom: 30px;
   }
-  
+
   .form_title {
     font-size: $md-fs;
     font-family: $montserrat;
@@ -25,6 +26,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .form_tit {
       width: 50%;
       border: solid 1px $line-grey;
