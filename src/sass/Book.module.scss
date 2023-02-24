@@ -1,0 +1,87 @@
+@use 'vars&mixins' as *;
+
+.book_main_cont {
+  @include flex_box($padd: 30px, $marg: 0 0 15px 0, $color: $black-two, $flex-d: row, $justify: space-between, $align: center, $wdth: 100%);
+
+  background-color: $white;
+  border: 1px solid $line-grey;
+  border-radius: 5px;
+
+  .main_info_cont {
+    @include flex_box($padd: 0, $marg: 0, $color: $black-two, $flex-d: column, $justify: space-between, $align: flex-start, $wdth: 33%);
+
+    .category {
+      @include style_text($f-color: $grey, $f-family: $montserrat, $f-weight: bold, $f-size: $sm-fs);
+    }
+
+    .title {
+      @include style_text($f-color: $black-two, $f-family: $roboto, $f-weight: bold, $f-size: $md-fs);
+
+      font-family: $roboto;
+    }
+
+    .author {
+      @include style_text($f-color: $drk-blue, $f-family: $roboto, $f-weight: light, $f-size: $sm-fs);
+
+      font-family: $roboto;
+    }
+
+    .user_interactions {
+      @include flex_box($padd: 0, $marg: 20px 0 0 0, $color: $black-two, $flex-d: row, $justify: flex-start, $align: flex-start, $wdth: 100%);
+
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .progress_cont {
+    border-right: 2px solid $line-grey;
+
+    @include flex_box($padd: 0, $marg: 0, $color: $black-two, $flex-d: row, $justify: center, $align: center, $wdth: 33%);
+
+    .progress_circle {
+      border-radius: 50%;
+      width: 4.25rem;
+      height: 4.25rem;
+      border: 5px solid #307bbe;
+      border-left-color: #e8e8e8;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-right: 15px;
+    }
+
+    .progress {
+      @include style_text($f-color: $black-two, $f-family: $montserrat, $f-weight: lighter, $f-size: $xlg-fs);
+    }
+
+    .completed {
+      @include style_text($f-color: $black-two, $f-family: $montserrat, $f-weight: lighter, $f-size: $sm-fs);
+
+      opacity: 0.7;
+    }
+  }
+
+  .chapter_cont {
+    @include flex_box($padd: 0 60px, $marg: 0, $color: $black-two, $flex-d: column, $justify: space-between, $align: flex-start, $wdth: 33%);
+
+    p {
+      @include style_text($f-color: $black-two, $f-family: $roboto, $f-weight: lighter, $f-size: $sm-fs);
+
+      opacity: 0.7;
+      font-family: $roboto;
+      margin-bottom: 5px;
+    }
+
+    button {
+      background-color: $lig-blue;
+      border: none;
+      color: $white;
+      font-family: $roboto;
+      padding: 7px 15px;
+      margin-top: 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}

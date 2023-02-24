@@ -1,0 +1,7 @@
+@use 'vars&mixins' as *;
+
+.list_cont {
+  @include flex_box($padd: 30px 70px, $align: flex-start);
+
+  background-color: $white;
+}

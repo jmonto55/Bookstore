@@ -1,0 +1,61 @@
+@use 'vars&mixins' as *;
+
+.form_container {
+  @include flex_box($padd: 0 70px 100px 70px, $marg: 0, $color: $black-two, $flex-d: column, $justify: center, $align: flex-start, $wdth: 100%);
+
+  background-color: $white;
+
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: $line-grey;
+    margin-bottom: 30px;
+  }
+
+  .form_title {
+    font-size: $md-fs;
+    font-family: $montserrat;
+    font-weight: bold;
+    color: $black-two;
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+
+  .form_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .form_tit {
+      width: 50%;
+      border: solid 1px $line-grey;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 1rem;
+      font-family: $montserrat;
+      opacity: 0.6;
+    }
+
+    .form_author {
+      width: 30%;
+      border: solid 1px $line-grey;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 1rem;
+      font-family: $montserrat;
+      opacity: 0.6;
+    }
+
+    .form_button {
+      width: 15%;
+      background-color: $lig-blue;
+      border: none;
+      color: $white;
+      font-family: $roboto;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}

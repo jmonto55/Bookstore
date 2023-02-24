@@ -1,0 +1,51 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+$roboto: 'Roboto Slab', serif;
+$montserrat: 'Montserrat', sans-serif;
+$sm-fs: 0.875rem;
+$md-fs: 1.375rem;
+$lg-fs: 1.875rem;
+$xlg-fs: 2rem;
+
+// Colors
+$lig-blue: #0290ff;
+$drk-blue: #4386bf;
+$black-two: #121212;
+$grey: #888;
+$lig-pink: #c4c4c4;
+$line-grey: #e8e8e8;
+$white: #fafafa;
+
+// Mixins
+@mixin flex_box($padd: 0, $marg: 0, $color: $black-two, $flex-d: column, $justify: center, $align: center, $wdth: 100%) {
+  padding: $padd;
+  margin: $marg;
+  width: $wdth;
+  display: flex;
+  flex-direction: $flex-d;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin style_text($f-color: $grey, $f-family: $montserrat, $f-weight: bold, $f-size: $sm-fs) {
+  color: $f-color;
+  font-family: $montserrat;
+  font-weight: $f-weight;
+  font-size: $f-size;
+}
+
+// Resets
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.d_flex {
+  display: flex;
+}

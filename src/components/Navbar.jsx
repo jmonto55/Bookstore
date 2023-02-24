@@ -3,25 +3,35 @@ import styles from '../sass/Navbar.module.scss';
 
 const Navbar = () => {
   const linkStyles = {
-    color: '#e7e7e7',
+    color: 'silver',
     textDecoration: 'none',
-    fontSize: '1.2rem',
+    fontSize: '0.87rem',
+    fontFamily: 'Montserrat',
   };
+
+  const userStyles = {
+    color: '#0290ff',
+    fontSize: '2rem',
+    margin: 'auto',
+  };
+
   return (
     <div className={styles.navbar_wrapper}>
       <nav className={styles.navbar}>
-        <i className={styles.wizard_hat} />
         <ul className={styles.navbar_list}>
           <li>
-            <Link style={linkStyles} to="/">Home</Link>
+            <h1 className={styles.navbar_brand}>Bookstore CMS</h1>
           </li>
           <li>
-            <Link style={linkStyles} to="/calculator">Calculator</Link>
+            <Link style={linkStyles} to="/">BOOKS</Link>
           </li>
           <li>
-            <Link style={linkStyles} to="/quote">Quote</Link>
+            <Link style={linkStyles} to="/categories">CATEGORIES</Link>
           </li>
         </ul>
+        <div className={styles.user_wrapper}>
+          <span style={userStyles} className="material-symbols-outlined">person</span>
+        </div>
       </nav>
     </div>
   );

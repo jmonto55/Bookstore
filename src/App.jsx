@@ -1,20 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
-import Calculator from './components/Calculator';
-import Home from './components/Home';
-import Quote from './components/Quote';
+import BookStoreLogic from './components/BookStoreLogic';
+import Categories from './components/Categories';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 
 function App() {
   return (
-    <div data-testid="app">
+    <div data-testid="app" className="app">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quote" element={<Quote />} />
-        <Route path="/calculator" element={<Calculator />} />
+        <Route path="/" element={<BookStoreLogic />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

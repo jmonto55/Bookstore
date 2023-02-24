@@ -1,33 +1,34 @@
+@use 'vars&mixins' as *;
+
 .navbar_wrapper {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
+  border-bottom: solid 1px $line-grey;
+
+  @include flex_box($padd: 10px 50px, $marg: 0, $color: $lig-blue, $flex-d: row, $justify: center, $align: center);
 
   .navbar {
-    max-width: 1500px;
-    padding: 20px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    @include flex_box($padd: 10px, $marg: 0 10px, $color: $lig-blue, $flex-d: row, $justify: space-between, $align: center);
 
     .navbar_list {
-      display: flex;
-      width: 50%;
-      justify-content: space-evenly;
+      max-width: 500px;
+      width: 60%;
 
-      li {
-        padding: 20px;
+      @include flex_box($padd: 10px, $marg: 0, $color: $lig-blue, $flex-d: row, $justify: space-between, $align: center);
+
+      .navbar_brand {
+        font-size: $lg-fs;
+        font-family: $montserrat;
+        font-weight: bold;
+        color: $lig-blue;
       }
     }
 
-    .wizard_hat {
-      display: block;
-      width: 70px;
-      height: 70px;
-      background-image: url(../assets/witch-hat.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      margin-left: 2.5%;
+    .user_wrapper {
+      border: solid 1.5px $line-grey;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      border-radius: 50%;
+      cursor: pointer;
     }
   }
 }
