@@ -32,4 +32,5 @@ const Book = ({ bookProp }) => {
     </div>
   );
 };
+
 export default Book;
