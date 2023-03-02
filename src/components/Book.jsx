@@ -1,10 +1,15 @@
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 import styles from '../sass/Book.module.scss';
 
 const Book = ({ bookProp }) => {
   const userStyles = {
     padding: '4px 15px',
+    border: 'none',
     borderRight: 'solid 2px #e8e8e',
+    backgroundColor: '#fafafa',
   };
+  const dispatch = useDispatch();
   return (
     <div className={styles.book_main_cont}>
       <div className={styles.main_info_cont}>
@@ -13,7 +18,16 @@ const Book = ({ bookProp }) => {
         <p className={styles.author}>{bookProp.author}</p>
         <ul className={styles.user_interactions}>
           <li style={{ padding: '4px 15px 4px 0', borderRight: 'solid 2px #e8e8e8' }} className={styles.author}>Comments</li>
-          <li style={userStyles} className={styles.author}>Remove</li>
+          <button
+            type="button"
+            style={userStyles}
+            className={styles.author}
+            onClick={() => {
+              dispatch(removeBook(bookProp.id));
+            }}
+          >
+            Remove
+          </button>
           <li style={{ padding: '4px 15px' }} className={styles.author}>Edit</li>
         </ul>
       </div>
