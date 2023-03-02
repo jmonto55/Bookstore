@@ -38,12 +38,14 @@ const booksSlice = createSlice({
         author,
         category: 'Philosophy',
       };
-
       state.books.push(newBook);
     },
     removeBook: (state, action) => {
       const itemId = action.payload;
       state.books = state.books.filter((book) => book.id !== itemId);
+      state.books.forEach((book, index) => {
+        book.id = index;
+      });
     },
   },
 });
