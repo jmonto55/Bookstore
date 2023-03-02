@@ -9,7 +9,9 @@ const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    checkStatus: () => 'Under construction',
+    checkStatus: (state) => {
+      state.categories = 'Under construction';
+    },
   },
 });
 

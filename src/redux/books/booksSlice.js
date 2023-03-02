@@ -37,8 +37,6 @@ const booksSlice = createSlice({
         title,
         author,
         category: 'Philosophy',
-        current: 'Chapter 17',
-        progress: '64%',
       };
 
       state.books.push(newBook);

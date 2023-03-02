@@ -39,12 +39,14 @@ const FormAddBook = () => {
           className={styles.form_tit}
           type="text"
           placeholder="Book title"
+          value={data.title}
           onChange={handleChangeTitle}
         />
         <input
           className={styles.form_author}
           type="text"
           placeholder="Book author"
+          value={data.author}
           onChange={handleChangeAuthor}
         />
         <button className={styles.form_button} type="submit">ADD BOOK</button>
