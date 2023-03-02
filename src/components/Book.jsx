@@ -34,13 +34,13 @@ const Book = ({ bookProp }) => {
       <div className={styles.progress_cont}>
         <div className={styles.progress_circle} />
         <div className={styles.progress_info}>
-          <h2 className={styles.progress}>{bookProp.progress}</h2>
+          <h2 className={styles.progress}>64%</h2>
           <p className={styles.completed}>completed</p>
         </div>
       </div>
       <div className={styles.chapter_cont}>
         <p>CURRENT CHAPTER</p>
-        <p style={{ opacity: '1' }}>{bookProp.current}</p>
+        <p style={{ opacity: '1' }}>Introduction</p>
         <button type="button">UPDATE PROGRESS</button>
       </div>
     </div>

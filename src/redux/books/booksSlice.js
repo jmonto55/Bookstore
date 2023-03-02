@@ -3,27 +3,21 @@ import { createSlice } from '@reduxjs/toolkit';
 const books = [
   {
     id: 1,
-    title: 'Thus Spake Zarathustra',
-    author: 'Friedrich Nietzsche',
-    category: 'Philosophy',
-    current: 'Chapter 17',
-    progress: '64%',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
   },
   {
     id: 2,
-    title: 'Nineteen Eighty-Four',
-    author: 'George Orwell',
-    category: 'SciFi novel',
-    current: 'Chapter 3: "A Lesson Learned"',
-    progress: '8%',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
   },
   {
     id: 3,
-    title: 'The Tunnel',
-    author: 'Ernesto Sabato',
-    category: 'Novel',
-    current: 'Introduction',
-    progress: '0%',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
 
@@ -36,23 +30,22 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: (state, title, author) => {
-      const bookTitle = title.payload;
-      const bookAuthor = author.payload;
+    addBook: (state, action) => {
+      const { title, author } = action.payload;
       const newBook = {
-        id: books.length + 1,
-        title: bookTitle,
-        author: bookAuthor,
+        id: state.books.length + 1,
+        title,
+        author,
         category: 'Philosophy',
-        current: 'Chapter 17',
-        progress: '64%',
       };
-
       state.books.push(newBook);
     },
     removeBook: (state, action) => {
       const itemId = action.payload;
       state.books = state.books.filter((book) => book.id !== itemId);
+      state.books.forEach((book, index) => {
+        book.id = index;
+      });
     },
   },
 });
