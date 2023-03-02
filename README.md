@@ -70,7 +70,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Users can see ahrd coded books for now**
+- **Users can add their favorite books**
+- **Users can remove any book from the page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
