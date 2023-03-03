@@ -1,18 +1,20 @@
+/* eslint-disable camelcase */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const appId = 'zWj3OcMObsviFejn8eLo';
-const apiURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`;
+// const appId = 'zWj3OcMObsviFejn8eLo';
+const apiURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zWj3OcMObsviFejn8eLo/books';
 
-const config = {
-  headers: {
-    'content-type': 'application/json',
-  },
-};
+// const config = {
+//   headers: {
+//     'content-type': 'application/json',
+//   },
+// };
 
 const initialState = {
   booksList: [],
-  isLoading: true,
+  isLoading: false,
+  isLoaded: false,
 };
 
 export const getBooks = createAsyncThunk(
@@ -27,27 +29,26 @@ export const getBooks = createAsyncThunk(
   },
 );
 
-export const addBook = createAsyncThunk(
+export const postBook = createAsyncThunk(
   'books/addBook',
-  async (book) => {
-    const stringifyData = JSON.stringify(book);
+  async (book, thunkAPI) => {
     try {
-      await axios.post(apiURL, stringifyData, config);
-      return { msg: 'Book added successfully!' };
-    } catch (err) {
-      return err;
+      const resp = await axios.post(apiURL, book);
+      return resp.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
     }
   },
 );
 
 export const removeBook = createAsyncThunk(
-  'books/getBooks',
-  async () => {
+  'books/removeBook',
+  async (id, thunkAPI) => {
     try {
-      const resp = await axios.get(apiURL);
+      const resp = await axios.delete(`${apiURL}/${id}`);
       return resp.data;
-    } catch (err) {
-      return err;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
     }
   },
 );
@@ -55,25 +56,7 @@ export const removeBook = createAsyncThunk(
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    // addBook: (state, action) => {
-    //   const { title, author } = action.payload;
-    //   const newBook = {
-    //     id: state.books.length + 1,
-    //     title,
-    //     author,
-    //     category: 'Philosophy',
-    //   };
-    //   state.books.push(newBook);
-    // },
-    // removeBook: (state, action) => {
-    //   const itemId = action.payload;
-    //   state.books = state.books.filter((book) => book.id !== itemId);
-    //   state.books.forEach((book, index) => {
-    //     book.id = index;
-    //   });
-    // },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getBooks.pending, (state) => {
@@ -85,6 +68,30 @@ const booksSlice = createSlice({
       })
       .addCase(getBooks.rejected, (state) => {
         state.isLoading = false;
+      })
+      .addCase(postBook.pending, (state) => {
+        state.isLoading = true;
+        state.isLoaded = false;
+      })
+      .addCase(postBook.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isLoaded = true;
+      })
+      .addCase(postBook.rejected, (state) => {
+        state.isLoading = false;
+        state.isLoaded = false;
+      })
+      .addCase(removeBook.pending, (state) => {
+        state.isLoading = true;
+        state.isLoaded = false;
+      })
+      .addCase(removeBook.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isLoaded = true;
+      })
+      .addCase(removeBook.rejected, (state) => {
+        state.isLoading = false;
+        state.isLoaded = false;
       });
   },
 });

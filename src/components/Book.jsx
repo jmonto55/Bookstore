@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { removeBook } from '../redux/books/booksSlice';
 import styles from '../sass/Book.module.scss';
 
 const Book = ({ bookProp }) => {
@@ -7,6 +7,7 @@ const Book = ({ bookProp }) => {
     padding: '4px 15px',
     border: 'none',
     backgroundColor: '#fafafa',
+    cursor: 'pointer',
   };
   const dispatch = useDispatch();
   return (
@@ -22,7 +23,8 @@ const Book = ({ bookProp }) => {
             style={userStyles}
             className={styles.author}
             onClick={() => {
-              dispatch(addBook());
+              console.log(bookProp.id);
+              dispatch(removeBook(bookProp.id));
             }}
           >
             Remove
