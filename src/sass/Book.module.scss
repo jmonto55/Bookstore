@@ -70,7 +70,7 @@
   }
 
   .chapter_cont {
-    @include flex_box($padd: 0 60px, $marg: 0, $color: $black-two, $flex-d: column, $justify: space-between, $align: flex-start, $wdth: 33%);
+    @include flex_box($padd: 0 60px, $marg: 0, $color: $black-two, $flex-d: column, $justify: space-between, $align: center, $wdth: 33%);
 
     p {
       @include style_text($f-color: $black-two, $f-family: $roboto, $f-weight: lighter, $f-size: $sm-fs);
