@@ -27,8 +27,9 @@ const FormAddBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setData({ item_id: uuidv4() });
+    console.log(data);
     dispatch(addBook(data));
-    setData({ title: '', author: '' });
+    setData({ title: '', author: '', item_id: '' });
   };
 
   return (

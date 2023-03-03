@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { addBook } from '../redux/books/booksSlice';
 import styles from '../sass/Book.module.scss';
 
 const Book = ({ bookProp }) => {
@@ -22,7 +22,7 @@ const Book = ({ bookProp }) => {
             style={userStyles}
             className={styles.author}
             onClick={() => {
-              dispatch(removeBook(bookProp.id));
+              dispatch(addBook());
             }}
           >
             Remove

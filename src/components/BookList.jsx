@@ -19,7 +19,6 @@ const BookList = () => {
   };
   let { booksList } = useSelector((store) => store.books);
   booksList = objectToArray(booksList);
-  console.log(booksList);
   return (
     <ul className={styles.list_cont}>
       {booksList.map((book) => (
