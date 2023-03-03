@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/books/booksSlice';
+import { v4 as uuidv4 } from 'uuid';
+import { postBook } from '../redux/books/booksSlice';
 import styles from '../sass/FormAddBook.module.scss';
 
 const FormAddBook = () => {
@@ -23,7 +24,9 @@ const FormAddBook = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook(data));
+    const id = uuidv4();
+    const newBook = { item_id: id, category: 'Drama', ...data };
+    dispatch(postBook(newBook));
     setData({ title: '', author: '' });
   };
 

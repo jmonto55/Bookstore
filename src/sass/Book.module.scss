@@ -26,6 +26,13 @@
       font-family: $roboto;
     }
 
+    .edit {
+      @include style_text($f-color: $drk-blue, $f-family: $roboto, $f-weight: light, $f-size: $sm-fs);
+
+      border-left: 2px solid $line-grey;
+      font-family: $roboto;
+    }
+
     .user_interactions {
       @include flex_box($padd: 0, $marg: 20px 0 0 0, $color: $black-two, $flex-d: row, $justify: flex-start, $align: flex-start, $wdth: 100%);
 
