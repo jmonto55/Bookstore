@@ -23,7 +23,6 @@ const Book = ({ bookProp }) => {
             style={userStyles}
             className={styles.author}
             onClick={() => {
-              console.log(bookProp.id);
               dispatch(removeBook(bookProp.id));
             }}
           >

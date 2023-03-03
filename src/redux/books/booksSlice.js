@@ -1,15 +1,8 @@
-/* eslint-disable camelcase */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// const appId = 'zWj3OcMObsviFejn8eLo';
-const apiURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zWj3OcMObsviFejn8eLo/books';
-
-// const config = {
-//   headers: {
-//     'content-type': 'application/json',
-//   },
-// };
+const appId = 'zWj3OcMObsviFejn8eLo';
+const apiURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`;
 
 const initialState = {
   booksList: [],
@@ -95,7 +88,5 @@ const booksSlice = createSlice({
       });
   },
 });
-
-// export const { addBook, removeBook } = booksSlice.actions;
 
 export default booksSlice.reducer;

@@ -6,15 +6,12 @@ import styles from '../sass/FormAddBook.module.scss';
 
 const FormAddBook = () => {
   const dispatch = useDispatch();
-  const [data, setData] = useState({
-    title: '', author: '', item_id: '', category: 'Drama',
-  });
+  const [data, setData] = useState({ title: '', author: '' });
 
   const handleChangeTitle = (e) => {
     setData({
       ...data,
       title: e.target.value,
-      item_id: uuidv4(),
     });
   };
 
@@ -22,14 +19,15 @@ const FormAddBook = () => {
     setData({
       ...data,
       author: e.target.value,
-      item_id: uuidv4(),
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(postBook(data));
-    setData({ title: '', author: '', item_id: '' });
+    const id = uuidv4();
+    const newBook = { item_id: id, category: 'Drama', ...data };
+    dispatch(postBook(newBook));
+    setData({ title: '', author: '' });
   };
 
   return (
