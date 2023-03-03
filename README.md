@@ -55,7 +55,7 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="">N/A</a></li>
+    <li><a href="https://microverse.notion.site/Bookstore-API-51ea269061f849118c65c0a53e88a739">Bookstore API</a></li>
   </ul>
 </details>
 
@@ -72,6 +72,7 @@
 
 - **Users can add their favorite books**
 - **Users can remove any book from the page**
+- **All data about books is stored using an API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
