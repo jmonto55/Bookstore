@@ -1,11 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 import styles from '../sass/FormAddBook.module.scss';
 
 const FormAddBook = () => {
   const dispatch = useDispatch();
-  const [data, setData] = useState({ title: '', author: '' });
+  const [data, setData] = useState({
+    title: '', author: '', id: '', category: 'Drama',
+  });
 
   const handleChangeTitle = (e) => {
     setData({
@@ -23,6 +26,7 @@ const FormAddBook = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setData({ item_id: uuidv4() });
     dispatch(addBook(data));
     setData({ title: '', author: '' });
   };

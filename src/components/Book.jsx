@@ -6,7 +6,6 @@ const Book = ({ bookProp }) => {
   const userStyles = {
     padding: '4px 15px',
     border: 'none',
-    borderRight: 'solid 2px #e8e8e',
     backgroundColor: '#fafafa',
   };
   const dispatch = useDispatch();
@@ -28,13 +27,16 @@ const Book = ({ bookProp }) => {
           >
             Remove
           </button>
-          <li style={{ padding: '4px 15px' }} className={styles.author}>Edit</li>
+          <li style={{ padding: '4px 15px' }} className={styles.edit}>Edit</li>
         </ul>
       </div>
       <div className={styles.progress_cont}>
         <div className={styles.progress_circle} />
         <div className={styles.progress_info}>
-          <h2 className={styles.progress}>64%</h2>
+          <h2 className={styles.progress}>
+            {Math.floor(Math.random() * 100)}
+            %
+          </h2>
           <p className={styles.completed}>completed</p>
         </div>
       </div>
